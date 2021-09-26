@@ -1,0 +1,6 @@
+export enum gameLoopReducerActionTypes {
+    INIT_GAME_LOOP = 'INIT_GAME_LOOP',
+    UPDATE_WORD_STATUS = 'UPDATE_WORD_STATUS',
+    LEVEL_UP = 'LEVEL_UP',
+    TOGGLE_GAME_STATUS = 'TOGGLE_GAME_STATUS'
+}
