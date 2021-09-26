@@ -1,0 +1,5 @@
+export enum GameLevels {
+    FIRST_ROUND = 'FIRST_ROUND',
+    SECOND_ROUND = 'SECOND_ROUND',
+    THIRD_ROUND = 'THIRD_ROUND'
+}
