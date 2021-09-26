@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Button, Platform, StyleSheet } from 'react-native';
-import { ITeam, TeamPreview } from '../components/TeamPreview';
 import { Text, View } from '../components/Themed';
 import { v4 as uuidv4 } from 'uuid';
 
