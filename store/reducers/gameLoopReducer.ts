@@ -7,14 +7,16 @@ interface IState {
     roundTime: number,
     words: IWord[],
     isGameOn: boolean,
-    currentLevel: GameLevels
+    isWin: boolean,
+    currentLevel: GameLevels,
 }
 
 const initialState: IState = {
     roundTime: 60,
     words: [],
     isGameOn: false,
-    currentLevel: GameLevels.FIRST_ROUND
+    isWin: false,
+    currentLevel: GameLevels.FIRST_ROUND,
 }
 
 export const gameLoopReducer = (state: IState = initialState, action: IAction) => {
