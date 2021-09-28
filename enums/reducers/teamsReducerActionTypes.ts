@@ -1,0 +1,6 @@
+export enum teamsReducerActionTypes {
+    ADD_NEW_TEAM = 'ADD_NEW_TEAM',
+    REMOVE_TEAM = 'REMOVE_TEAM',
+    UPDATE_TEAM_NAME = 'UPDATE_TEAM_NAME',
+    UPDATE_TEAM_SCORE = 'UPDATE_TEAM_SCORE',
+}
