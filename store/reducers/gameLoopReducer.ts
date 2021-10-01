@@ -12,7 +12,7 @@ interface IState {
 }
 
 const initialState: IState = {
-    roundTime: 60,
+    roundTime: 20,
     words: [],
     isGameOn: false,
     isWin: false,
@@ -29,7 +29,7 @@ export const gameLoopReducer = (state: IState = initialState, action: IAction) =
         case gameLoopReducerActionTypes.UPDATE_WORD_STATUS:
             const { wordId } = action.payload
             return {
-                ...state, words: words.map((word: IWord) => {
+                ...state, words: state.words.map((word: IWord) => {
                     if (word.id === wordId) {
                         return { ...word, status: true }
                     }
@@ -54,7 +54,11 @@ export const gameLoopReducer = (state: IState = initialState, action: IAction) =
                         })
                     }
                 case GameLevels.THIRD_ROUND:
-                    return
+                    return {
+                        ...state, currentLevel: GameLevels.FIRST_ROUND, words: state.words.map((word: IWord) => {
+                            return { ...word, status: false }
+                        })
+                    }
                 default:
                     break;
             }

@@ -1,13 +1,22 @@
 import { teamsReducerActionTypes } from "../../enums/reducers/teamsReducerActionTypes";
 import { IAction } from "../../interfaces/IAction"
 import { ITeam } from "../../interfaces/ITeam";
-
+import { v4 as uuidv4 } from 'uuid'
 interface IState {
     teams: ITeam[]
 }
 
 const initialState: IState = {
-    teams: []
+    teams: [{
+        id: uuidv4(),
+        teamName: 'alon',
+        score: 0
+    },
+    {
+        id: uuidv4(),
+        teamName: 'shahi',
+        score: 0
+    }]
 }
 
 export const teamsReducer = (state: IState = initialState, action: IAction) => {
