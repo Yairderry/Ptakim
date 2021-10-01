@@ -12,9 +12,10 @@ import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import { GameConfigScreen } from '../screens/GameConfigScreen';
+import { GameScreen } from '../screens/GameScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
+import { PauseGameScreen } from '../screens/PauseGameScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
@@ -94,10 +95,10 @@ function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="GameConfig"
-        component={GameConfigScreen}
+        name="Game"
+        component={GameScreen}
         options={{
-          title: 'Game Config',
+          title: 'Game',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
